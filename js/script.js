@@ -1,3 +1,4 @@
+const githubBtn = document.getElementById('github-button')
 const themeToggleBtn = document.getElementById('theme-toggle');
 const lightIcon = document.getElementById('theme-toggle-light-icon');
 const darkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -20,6 +21,11 @@ if (savedTheme) {
 } else {
     setTheme('dark');
 }
+
+githubBtn.addEventListener('click', () => {
+    const url = 'https://github.com/cloudirector/crInfo/';
+    window.open(url, '_blank').focus();
+});
 
 themeToggleBtn.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
